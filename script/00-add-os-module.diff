@@ -1,0 +1,12 @@
+--- src/scripting.c	2015-01-17 02:14:10.084459647 +0000
++++ src/scripting.c	2015-01-17 02:14:25.459334663 +0000
+@@ -551,8 +551,8 @@
+
+ #if 0 /* Stuff that we don't load currently, for sandboxing concerns. */
+     luaLoadLib(lua, LUA_LOADLIBNAME, luaopen_package);
+-    luaLoadLib(lua, LUA_OSLIBNAME, luaopen_os);
+ #endif
++    luaLoadLib(lua, LUA_OSLIBNAME, luaopen_os);
+ }
+
+ /* Remove a functions that we don't want to expose to the Redis scripting
