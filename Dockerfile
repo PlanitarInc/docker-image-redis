@@ -1,11 +1,12 @@
 FROM planitar/base
 
+ADD conf /etc/redis/
 ADD bin /opt/redis/bin
-ADD conf/redis.conf /etc/redis/
-
 ENV PATH /opt/redis/bin:$PATH
 
 VOLUME /redis/data
+
 EXPOSE 6379
+EXPOSE 26379
 
 CMD ["redis-server", "/etc/redis/redis.conf"]
