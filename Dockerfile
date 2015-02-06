@@ -4,8 +4,6 @@ ADD conf /etc/redis/
 ADD bin /opt/redis/bin
 ENV PATH /opt/redis/bin:$PATH
 
-VOLUME /redis/data
-
 EXPOSE 6379
 EXPOSE 26379
 
